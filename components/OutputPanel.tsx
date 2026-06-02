@@ -26,10 +26,10 @@ export default function OutputPanel({
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleDownloadDocx = async () => {
+  const handleDownloadPdf = async () => {
     if (!coverLetter) return;
-    const { downloadDocx } = await import('@/lib/docxExport');
-    await downloadDocx(coverLetter);
+    const { downloadPdf } = await import('@/lib/pdfExport');
+    await downloadPdf(coverLetter);
   };
 
   const btnBase =
@@ -61,10 +61,10 @@ export default function OutputPanel({
         </button>
         <button
           className={btnSecondary}
-          onClick={handleDownloadDocx}
+          onClick={handleDownloadPdf}
           disabled={!coverLetter || isLoading}
         >
-          Download DOCX
+          Download PDF
         </button>
         <button
           className={btnSecondary}
