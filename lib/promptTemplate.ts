@@ -122,7 +122,7 @@ Jaden Path
 4. Reference Jaden's Real Estate Analytics Intern role at Pacific Horizon LLC when it is relevant to the position.
 5. Pull specific details from the job description — mention the company's mission, product, or role responsibilities by name. Never write generically.
 6. Do not invent experience, metrics, or company facts not present in the background section or job description.
-7. Length: 4 to 5 full paragraphs, approximately 350 to 450 words.
+7. Length: 4 to 5 paragraphs, strictly 300 to 400 words maximum. The letter must fit on a single page when printed. Do not exceed 400 words under any circumstances.
 
 ## Paragraph Structure
 

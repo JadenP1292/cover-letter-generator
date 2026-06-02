@@ -41,18 +41,24 @@ export async function downloadPdf(text: string): Promise<void> {
   const lineHeight = 16;
   const blankLineHeight = 13;
 
+  const pageHeight = doc.internal.pageSize.getHeight();
+  const marginBottom = 72;
+  const maxY = pageHeight - marginBottom;
+
   let y = marginTop;
 
   const addLine = (line: string) => {
     const wrapped = doc.splitTextToSize(line, maxWidth) as string[];
     for (const wl of wrapped) {
-      doc.text(wl, marginLeft, y);
-      y += lineHeight;
+      if (y <= maxY) {
+        doc.text(wl, marginLeft, y);
+        y += lineHeight;
+      }
     }
   };
 
   const addBlank = () => {
-    y += blankLineHeight;
+    if (y + blankLineHeight <= maxY) y += blankLineHeight;
   };
 
   // Header: date, name, email, phone
