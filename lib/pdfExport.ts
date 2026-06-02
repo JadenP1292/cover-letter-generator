@@ -17,7 +17,15 @@ function formatDate(date: Date): string {
   return `${months[date.getMonth()]} ${day}${getOrdinal(day)}, ${date.getFullYear()}`;
 }
 
-export async function downloadPdf(text: string, filename = 'cover-letter.pdf'): Promise<void> {
+function extractCompanyName(text: string): string {
+  const firstLine = text.split('\n')[0].trim();
+  const match = firstLine.match(/^Hi (.+?) Team,?$/);
+  return match ? match[1] : 'Company';
+}
+
+export async function downloadPdf(text: string): Promise<void> {
+  const company = extractCompanyName(text);
+  const filename = `Jaden Path - ${company} Cover Letter.pdf`;
   const { default: jsPDF } = await import('jspdf');
 
   const doc = new jsPDF({ unit: 'pt', format: 'letter' });
