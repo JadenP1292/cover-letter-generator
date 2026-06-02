@@ -43,14 +43,17 @@ export async function downloadPdf(text: string): Promise<void> {
 
   const pageHeight = doc.internal.pageSize.getHeight();
   const marginBottom = 72;
-  const maxY = pageHeight - marginBottom;
+
+  // Reserve space at the bottom for "Best regards,\n\nJaden Path"
+  const signOffHeight = lineHeight + blankLineHeight + lineHeight + blankLineHeight;
+  const bodyMaxY = pageHeight - marginBottom - signOffHeight;
 
   let y = marginTop;
 
   const addLine = (line: string) => {
     const wrapped = doc.splitTextToSize(line, maxWidth) as string[];
     for (const wl of wrapped) {
-      if (y <= maxY) {
+      if (y <= bodyMaxY) {
         doc.text(wl, marginLeft, y);
         y += lineHeight;
       }
@@ -58,7 +61,7 @@ export async function downloadPdf(text: string): Promise<void> {
   };
 
   const addBlank = () => {
-    if (y + blankLineHeight <= maxY) y += blankLineHeight;
+    if (y + blankLineHeight <= bodyMaxY) y += blankLineHeight;
   };
 
   // Header: date, name, email, phone
@@ -68,8 +71,13 @@ export async function downloadPdf(text: string): Promise<void> {
   addLine('(949) 396-4969');
   addBlank();
 
-  // Cover letter body — blank lines become paragraph spacing
-  const lines = text.split('\n');
+  // Split sign-off from body so we can pin it at the bottom
+  const signOffMarker = 'Best regards,';
+  const signOffIndex = text.indexOf(signOffMarker);
+  const body = signOffIndex >= 0 ? text.slice(0, signOffIndex).trimEnd() : text;
+
+  // Render body
+  const lines = body.split('\n');
   for (const line of lines) {
     if (line.trim() === '') {
       addBlank();
@@ -77,6 +85,11 @@ export async function downloadPdf(text: string): Promise<void> {
       addLine(line);
     }
   }
+
+  // Always render sign-off with guaranteed spacing at the bottom
+  const signOffY = pageHeight - marginBottom - lineHeight - blankLineHeight - lineHeight;
+  doc.text(signOffMarker, marginLeft, signOffY);
+  doc.text('Jaden Path', marginLeft, signOffY + blankLineHeight + lineHeight);
 
   doc.save(filename);
 }
