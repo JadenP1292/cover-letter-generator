@@ -12,16 +12,43 @@ export function buildPrompt(inputs: PromptInputs): string {
 Name: Jaden Path
 Email: jadenp1292@gmail.com
 Phone: (949) 396-4969
-Education: Senior at Loyola Marymount University, studying Information Systems and Business Analytics with a minor in Computer Science
+Location: Irvine, CA
 
-Current role: Real Estate Analytics Intern — financial analysis, KPI benchmarking, year-over-year analysis, rent rolls, income statements, balance sheets, investment performance analysis, financial modeling, portfolio and business insights
+Education: Loyola Marymount University — Bachelor of Science, Information Systems & Business Analytics, Minor in Computer Science (August 2022 - May 2026). GPA: 3.80, Dean's List, Xavier Award.
 
-Past experience:
-- Business Analyst / Operations Intern: audits, inventory reports, product performance analysis, website support, operations support, new product development, cross-functional collaboration
-- Creator / Growth / Social Media: content creation, audience growth, platform strategy, engagement analysis, experimentation with content formats, understanding Gen Z behavior online, digital marketing instincts
-- Technical Project: Built a Creator Matchmaking App using Expo, React Native, TypeScript, Supabase, and NativeWind
+Work Experience:
 
-Skills: SQL, Python, Excel, financial modeling, data analysis, dashboards, AI tools, business analysis, cross-functional collaboration, content creation, audience growth, project coordination, research
+1. Real Estate Analytics Intern — Pacific Horizon LLC (May 2025 - May 2026)
+   - Built and deployed an internal web application used firm-wide to automate financial modeling across a ~$40M, 20-property portfolio, reducing modeling time up to 85%
+   - Engineered the tool to accept raw financial statements and cash flow inputs, outputting ranked property performance reports with automated identification of underperformers and itemized expense diagnostics
+   - Conducted year-over-year analysis of rent rolls, income statements, and balance sheets to drive asset management decisions
+
+2. Founder and Operator - Digital Media Brand (Aug 2025 - May 2026)
+   - Founded a multi-platform digital media brand and scaled it from 0 to 473,000+ followers and 271M+ cumulative views in 8 months, building scalable content systems and growth strategies across TikTok, YouTube, and Instagram
+   - Secured and negotiated paid partnership deals with global major labels and media companies including Motown Records, Atlantic Records, 88Rising, and CUBE Entertainment
+
+3. Business Analyst and Operations Intern — Rose City Works (May 2024 - Aug 2024)
+   - Informed $2M+ in sales decisions through historical trend analysis across Shopify storefronts for artist and music industry clients
+   - Analyzed inventory across client stores to identify top and underperforming SKUs, optimizing product offerings
+
+4. Marketing and Public Relations Manager — The Emily Shane Foundation (Sep 2023 - May 2025)
+   - Drove a 17% increase in audience reach through email campaign targeting hundreds of subscribers, earning the foundation a 2024 California Nonprofit of the Year award
+   - Scaled Mentor/Tutor program by establishing partnerships with 13 nonprofits across LA
+
+Projects:
+
+1. Imaging Industry Competitive Intelligence Pipeline (Jan 2026 - May 2026) — Python, Snowflake, dbt, GitHub Actions, Streamlit
+   - Built an end-to-end ELT pipeline ingesting stock price and news data for 5 imaging companies via Alpha Vantage API and web scraper, loading into Snowflake and transforming with dbt
+   - Orchestrated fully automated daily pipeline runs via GitHub Actions and deployed an interactive competitive intelligence dashboard to Streamlit Community Cloud
+
+2. Creator Matchmaking App (Mar 2026 - May 2026) — React Native, Supabase, TypeScript
+   - Built a full-stack mobile MVP connecting creators through swipe-based matching for discovery and collaboration
+
+3. AcePrep - AI Student Insights Dashboards (Sep 2025 - Mar 2026) — React, Prompt Engineering, API Integration
+   - Led development of AI-powered student insights dashboards tracking 7+ performance metrics
+   - Improved AI-generated quiz relevance through 50+ prompt experiments and integrated analytics APIs into frontend dashboards
+
+Skills: SQL, Python, Snowflake, dbt, Streamlit, Excel, React, FastAPI, GitHub Actions, Data Analysis, Growth Analytics, Prompt Engineering, Financial Modeling, Content Creation, Audience Growth
 
 ## Style Reference Letters
 
