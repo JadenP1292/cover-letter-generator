@@ -28,9 +28,9 @@ export async function downloadPdf(text: string, filename = 'cover-letter.pdf'): 
   const maxWidth = pageWidth - marginLeft - 72;
 
   doc.setFont('times', 'normal');
-  doc.setFontSize(11);
+  doc.setFontSize(12);
 
-  const lineHeight = 15;
+  const lineHeight = 16;
   const blankLineHeight = 13;
 
   let y = marginTop;
