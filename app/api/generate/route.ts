@@ -1,19 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { buildPrompt } from '@/lib/promptTemplate';
 
-const MOCK_LETTER = `Dear Hiring Manager,
+const MOCK_LETTER = `Hi [Company Name] Team,
 
-I'm really excited about the opportunity to join [Company Name] as a [Role Title]. The role sounds like a great fit for where I am right now, and from what I've read, it's the kind of work I genuinely enjoy doing.
+I'm excited to apply for the [Role Title] role at [Company Name]. Your work immediately stood out to me, especially because it sits at the intersection of technology, strategy, and real-world impact. The opportunity to contribute to a team building something meaningful is exactly the type of work I'm looking to be a part of.
 
-What draws me to [Company Name] is the product you're building and the problems you're solving. I spend a lot of time thinking about how products grow and how businesses actually work, so finding a team where that curiosity is an asset sounds exciting.
+I'm currently a senior at Loyola Marymount University studying Information Systems and Business Analytics with a minor in Computer Science. My background combines analytical thinking, financial problem-solving, and operational experience across both academic and professional settings. In my current role as a Real Estate Analytics Intern, I work extensively with financial statements, portfolio analysis, KPI benchmarking, and performance tracking to support data-driven business decisions. I've also built and maintained financial models, identified trends from complex datasets, and worked in a business analyst and operations role where I coordinated cross-functional projects and supported new product development.
 
-Over the past couple of years, I've built a solid cross-functional foundation. During my real estate analytics internship, I worked with financial models, income statements, rent rolls, and KPI benchmarks across a portfolio of properties, which taught me how to move from raw numbers to real business insights. I also worked in a business analyst and operations role, running product performance audits, supporting new product development, and collaborating across teams to get things shipped. And on the technical side, I built a Creator Matchmaking App from scratch using React Native, TypeScript, and Supabase, which gave me strong hands-on experience going from idea to working product.
+What excites me most about [Company Name] is the opportunity to operate at the intersection of technology and business strategy. I enjoy roles where analytical thinking connects directly to broader organizational goals, and where the work has a real impact on the product and team. I'm especially drawn to the chance to contribute to a company where I can take ownership early and grow alongside the business.
 
-I also have a background in the creator and growth space. I've studied audience behavior, experimented with content formats, and thought carefully about what drives real engagement. That gives me a sharper lens on users and growth than most candidates at my stage.
+I'm also deeply interested in AI, product strategy, and growth, and I actively incorporate AI tools into my own workflows. Outside of my professional experience, I built a Creator Matchmaking App from scratch using React Native, TypeScript, and Supabase, which gave me direct hands-on experience with the full product development cycle and a stronger appreciation for what it takes to build something users actually want to use.
 
-I'd love to bring all of this to [Company Name] and grow with the team. Thanks for your time, and I hope to connect soon.
+Thank you for your time and consideration. I would welcome the opportunity to contribute my analytical mindset, operational thinking, and enthusiasm to [Company Name] and help the team continue to grow.
 
-Sincerely,
+Best regards,
+
 Jaden Path`;
 
 export async function POST(request: NextRequest) {
