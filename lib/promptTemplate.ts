@@ -14,7 +14,7 @@ Email: jadenp1292@gmail.com
 Phone: (949) 396-4969
 Location: Irvine, CA
 
-Education: Loyola Marymount University — Bachelor of Science, Information Systems & Business Analytics, Minor in Computer Science (August 2022 - May 2026). GPA: 3.80, Dean's List, Xavier Award.
+Education: Loyola Marymount University — Bachelor of Science, Information Systems & Business Analytics, Minor in Computer Science. Graduated May 2026. GPA: 3.80, Dean's List, Xavier Award.
 
 Work Experience:
 
@@ -118,8 +118,8 @@ Jaden Path
 
 1. NEVER use em dashes anywhere. No exceptions.
 2. Match Jaden's voice exactly as shown in the examples above: professional, polished, enthusiastic, and specific.
-3. Include the exact phrase "senior at Loyola Marymount University studying Information Systems and Business Analytics with a minor in Computer Science" in paragraph 2.
-4. Reference Jaden's current Real Estate Analytics Intern role when it is relevant to the position.
+3. In paragraph 2, introduce Jaden's education using graduated language — he finished his degree in May 2026. Use phrasing like "I recently graduated from Loyola Marymount University with a degree in Information Systems and Business Analytics and a minor in Computer Science." Do NOT say "currently a senior" — the style examples below were written before graduation and use that phrasing, but it is now outdated.
+4. Reference Jaden's Real Estate Analytics Intern role at Pacific Horizon LLC when it is relevant to the position.
 5. Pull specific details from the job description — mention the company's mission, product, or role responsibilities by name. Never write generically.
 6. Do not invent experience, metrics, or company facts not present in the background section or job description.
 7. Length: 4 to 5 full paragraphs, approximately 350 to 450 words.
