@@ -1,18 +1,9 @@
 export interface PromptInputs {
   jobDescription: string;
-  companyName?: string;
-  roleTitle?: string;
-  hiringManager?: string;
-  additionalNotes?: string;
 }
 
 export function buildPrompt(inputs: PromptInputs): string {
-  const { jobDescription, companyName, roleTitle, hiringManager, additionalNotes } = inputs;
-  const greeting = hiringManager
-    ? `Hi ${hiringManager},`
-    : companyName
-    ? `Hi ${companyName} Team,`
-    : 'Hi there,';
+  const { jobDescription } = inputs;
 
   return `You are writing a cover letter on behalf of Jaden Path. Study the style reference letters below carefully to understand his exact voice, structure, and tone. Then write a new cover letter tailored to the specific job description provided.
 
@@ -118,18 +109,13 @@ Paragraph 4: An additional angle — a specific idea, soft skill, entrepreneuria
 
 Paragraph 5: Closing — thank them, express genuine interest in contributing, end with a warm and confident statement specific to the company.
 
-## Job Details
-${companyName ? `Company: ${companyName}` : ''}
-${roleTitle ? `Role: ${roleTitle}` : ''}
-${additionalNotes ? `Additional context: ${additionalNotes}` : ''}
-
 ## Job Description
 
 ${jobDescription}
 
 ## Output Instructions
 
-Write the cover letter now. Start with "${greeting}" on the first line. End with:
+Write the cover letter now. Extract the company name and role title from the job description above and use them naturally throughout the letter. Start with "Hi [Company Name] Team," where [Company Name] is the actual company name from the job description. End with:
 
 Best regards,
 

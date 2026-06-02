@@ -7,10 +7,6 @@ import OutputPanel from '@/components/OutputPanel';
 
 export default function Home() {
   const [jobDescription, setJobDescription] = useState('');
-  const [companyName, setCompanyName] = useState('');
-  const [roleTitle, setRoleTitle] = useState('');
-  const [hiringManager, setHiringManager] = useState('');
-  const [additionalNotes, setAdditionalNotes] = useState('');
   const [coverLetter, setCoverLetter] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
@@ -23,13 +19,7 @@ export default function Home() {
       const response = await fetch('/api/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          jobDescription,
-          companyName,
-          roleTitle,
-          hiringManager,
-          additionalNotes,
-        }),
+        body: JSON.stringify({ jobDescription }),
       });
       const data = await response.json();
       if (!response.ok) {
@@ -46,10 +36,6 @@ export default function Home() {
 
   const clearAll = () => {
     setJobDescription('');
-    setCompanyName('');
-    setRoleTitle('');
-    setHiringManager('');
-    setAdditionalNotes('');
     setCoverLetter('');
     setError('');
   };
@@ -66,16 +52,8 @@ export default function Home() {
         <div className="h-full w-[45%]">
           <InputPanel
             jobDescription={jobDescription}
-            companyName={companyName}
-            roleTitle={roleTitle}
-            hiringManager={hiringManager}
-            additionalNotes={additionalNotes}
             isLoading={isLoading}
             onJobDescriptionChange={setJobDescription}
-            onCompanyNameChange={setCompanyName}
-            onRoleTitleChange={setRoleTitle}
-            onHiringManagerChange={setHiringManager}
-            onAdditionalNotesChange={setAdditionalNotes}
             onGenerate={generate}
           />
         </div>
